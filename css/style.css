@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/*
+============ 
+ LAYOUT 
+============ 
+*/
+
+/* 
+ * HOME *
+*/
+
+body {
+  background-image: url("../assets/img/home/backgroud-mycv.png");
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+}
+
+#left-content {
+  width: 25%;
+}
+
+#right-content {
+  width: 75%;
+}
+
+/* NAV */
+
+#right-content nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-left ,
+.nav-right  {
+  display: flex;
+}
+
+.nav-left *,
+.nav-right * {
+  list-style: none;
+}
+
+/* ROW */
+.row {
+  display: flex;
+  gap: 5%;
+}
+
+.col-1-4 {
+  width: 20%;
+}
+
+/* SKILLS */
+.skills-progression {
+  display: flex;
+}
+
+.design-skills,
+.code-skills {
+  width: 50%;
+}
+
+.design-skills *,
+.code-skills *{
+  list-style: none;
+}
+
+/* 
+ * RESUME *
+*/
+
+.work-history,
+.education-history {
+  width: 50%;
+}
+
+
+/* 
+ * CONTACT *
+*/
+.contact-sections {
+  display: flex;
+}
+
+.contact-form,
+.contact-infor {
+  width: 50%;
+}
+
+.contact-map > iframe {
+  width: 100%;
+}
+
+
