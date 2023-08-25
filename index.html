@@ -11,6 +11,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/normalize.css" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
@@ -18,18 +24,40 @@
   <body>
     <section class="home-page">
       <div class="container">
-        <div id="left-content">
-          <header class="card-infor">
-            <span>HENRY ROONEY</span>
-            <span>Creative Designer</span>
-            <img src="assets/img/home/henry_avatar-my-cv.jpg" alt="Henry Rooney photo" />
-          </header>
+        <div class="row">
+        <div id="left-content" >
+          <div class="card-box content-box">
+            <header class="card-infor">
+              <div class="card-name">
+                <span class="name">HENRY ROONEY</span>
+                <br>
+                <span class="title">Creative Designer</span>
+              </div>
+              <figure class="infor-image">
+                <img
+                  src="assets/img/home/henry_avatar-my-cv.jpg"
+                  alt="Henry Rooney photo"
+                />
+              </figure>
+              <ul class="infor">
+                <li class="line-points"><i class="fa-solid fa-glasses"></i></li>
+                <li class="line-points"><span>Name:</span> Henry Rooney</li>
+                <li class="line-points"><span>Birthday:</span> 06 December 1987</li>
+                <li class="line-points"><span>Job:</span> Freelancer</li>
+                <li class="line-points"><span>Email:</span> henry@domain.com</li>
+                <li class="line-points"><span>Skype:</span> henryrooney85</li>
+              </ul>
+            </header>
+            <div class="card-btn">
+              <a class="site-btn icon" href="#"><span>Download CV</span><i class="fa-solid fa-download"></i></a>
+            </div>
+          </div>
         </div>
 
         <div id="right-content">
           <nav>
-            <ul class="nav-left">
-              <li><a href="index.html">Home</a></li>
+            <ul class="nav-left ">
+              <li><a href="index.html"><i class="fa-solid fa-house fa-xs"></i></a></li>
               <li><a href="resume.html">Resume</a></li>
               <li><a href="portfolio.html">Portfolio</a></li>
               <li><a href="blog.html">Blog</a></li>
@@ -45,9 +73,9 @@
             </ul>
           </nav>
 
-          <main>
+          <main class="content-box">
             <section class="about-me">
-              <h2>About me</h2>
+              <h0>About me</h1>
               <p>
                 Started earnest brother believe an exposed so. Me he believing
                 daughters if forfeited at furniture. Age again and stuff downs
@@ -71,26 +99,26 @@
             </section>
 
             <section>
-              <h2>My Services</h2>
-              <section class="row">
-                <section class="col-1-4">
+              <h1>My Services</h2>
+              <section class="services-row">
+                <section class="col-2-4">
                   <span>Web Development</span>
-                  <p>I have been working on web design for 10 years.</p>
+                  <p>I have been working on web design for 9 years.</p>
                 </section>
 
-                <section class="col-1-4">
+                <section class="col-2-4">
                   <span> Branding Identity </span>
                   <p>
                     We will make you a brand that is catchy and leaves a trace.
                   </p>
                 </section>
 
-                <section class="col-1-4">
+                <section class="col-2-4">
                   <span> Illustrator </span>
-                  <p>I have been working on illustration design for 6 years.</p>
+                  <p>I have been working on illustration design for 5 years.</p>
                 </section>
 
-                <section class="col-1-4">
+                <section class="col-2-4">
                   <span> Fast Delivery </span>
                   <p>I deliver your business as fast as possible.</p>
                 </section>
@@ -99,7 +127,7 @@
 
             <section class="skills-progression">
               <section class="design-skills">
-                <h2>Design Skills</h2>
+                <h1>Design Skills</h2>
                 <ul>
                   <li>Photoshop</li>
                   <li>Sketch</li>
@@ -107,11 +135,11 @@
                 </ul>
               </section>
               <section class="code-skills">
-                <h2>Code Skills</h2>
+                <h1>Code Skills</h2>
                 <ul>
                   <li>Javascript</li>
                   <li>HTML5</li>
-                  <li>CSS3</li>
+                  <li>CSS2</li>
                 </ul>
               </section>
             </section>
@@ -119,9 +147,11 @@
 
           <footer>
             <span>Techlead</span>
-            <p>© 2017 All rights reserved. Designed by Some one</p>
+            <p>© 2016 All rights reserved. Designed by Some one</p>
           </footer>
         </div>
+        </div>
+
       </div>
     </section>
   </body>

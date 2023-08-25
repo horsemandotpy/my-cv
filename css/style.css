@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
-}
-
 img,
 picture,
 svg {
@@ -15,13 +11,64 @@ svg {
   display: block;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 /*
-============ 
- LAYOUT 
-============ 
+==============
+  TYPOGRAPHY
+==============
 */
 
-/* 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #212529;
+}
+
+/*
+==============
+  Utility
+==============
+ */
+.site-btn {
+  border: 0;
+  border-radius: 50px;
+  font-size: 14px;
+  background-color: orange;
+  line-height: 35px;
+  font-weight: 500;
+  padding: 1px 29px;
+}
+
+.site-btn.icon {
+  display: inline-block;
+  text-align: left;
+  padding: 1px 6px 1px 19px;
+}
+
+.site-btn.icon i {
+  font-size: 11px;
+  background-color: #fff;
+  margin: 4px 0 0 15px;
+  padding: 8px;
+  border-radius: 50px;
+}
+
+/*
+==============
+  LAYOUT
+==============
+*/
+
+/*
  * HOME *
 */
 
@@ -32,7 +79,17 @@ body {
 .container {
   max-width: 1320px;
   margin: 0 auto;
+  margin-top: 60px;
+}
+
+.row {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.row > * {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
 }
 
 #left-content {
@@ -43,6 +100,133 @@ body {
   width: 75%;
 }
 
+/* LEFT CONTENT */
+
+.card-box {
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.content-box {
+  background-color: #fff;
+  box-shadow: 0 2px 92px #00000012;
+}
+
+.card-name {
+  padding: 20px;
+  line-height: 18px;
+}
+
+.card-name .name {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.card-name .title {
+  color: #777;
+  font-size: 13px;
+}
+
+.infor li.line-points {
+  color: #7f7f7f;
+  font-size: 13.5px;
+  line-height: 12px;
+}
+
+.infor li span {
+  color: #000;
+}
+
+.infor-image {
+  clip-path: polygon(0 9%, 100% 0, 100% 94%, 0% 100%);
+  padding: 0;
+  margin: 0;
+  display: block;
+  margin-top: -18px;
+}
+
+ul.infor {
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  list-style: none;
+  margin: 8px 0 8px 35px;
+}
+
+.infor .line-points {
+  border-left: 2px solid #eee;
+  padding-bottom: 23px;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.infor .line-points:first-of-type::before {
+  display: none;
+}
+
+.infor .line-points:first-of-type {
+  max-width: 100%;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.infor .line-points:first-of-type i {
+  color: #000;
+  position: absolute;
+  top: -25px;
+  left: -20px;
+  font-size: 15px;
+}
+
+.infor .line-points:first-of-type i::before {
+  background-color: orange;
+  padding: 12px;
+  border-radius: 50px;
+}
+
+.infor .line-points::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border: 2px solid orange;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 5px;
+  left: -3px;
+  font-size: 8px;
+  font-weight: 400;
+}
+
+.infor .line-points:last-of-type {
+  border: 0;
+}
+
+.card-btn {
+  text-align: center;
+  width: 100%;
+  margin: 18px auto 30px;
+}
+
+.card-btn > * {
+  text-decoration: none;
+  color: #000;
+}
+
+/* RIGHT CONTENT */
+#right-content nav {
+  background: #fff;
+  border-radius: 6px;
+  width: 100%;
+  height: 70px;
+  margin-bottom: 30px;
+  line-height: 70px;
+  display: inline-block;
+  box-shadow: 0 2px 92px #00000012;
+}
+
 /* NAV */
 
 #right-content nav {
@@ -50,8 +234,8 @@ body {
   justify-content: space-between;
 }
 
-.nav-left ,
-.nav-right  {
+.nav-left,
+.nav-right {
   display: flex;
 }
 
@@ -60,8 +244,41 @@ body {
   list-style: none;
 }
 
-/* ROW */
-.row {
+.nav-left a {
+  text-transform: uppercase;
+  color: #000;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 73px;
+  display: block;
+  text-decoration: none;
+}
+
+.nav-left {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-left li:first-of-type {
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  background-color: orange;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  margin-right: 1rem;
+}
+
+.nav-left i {
+  font-size: 1.7rem;
+}
+
+.nav-left li:first-of-type a {
+  padding: 0;
+}
+
+/* SERVICE ROW */
+.services-row {
   display: flex;
   gap: 5%;
 }
@@ -81,11 +298,11 @@ body {
 }
 
 .design-skills *,
-.code-skills *{
+.code-skills * {
   list-style: none;
 }
 
-/* 
+/*
  * RESUME *
 */
 
@@ -94,8 +311,7 @@ body {
   width: 50%;
 }
 
-
-/* 
+/*
  * CONTACT *
 */
 .contact-sections {
@@ -110,5 +326,3 @@ body {
 .contact-map > iframe {
   width: 100%;
 }
-
-
