@@ -16,6 +16,20 @@ ul {
   margin: 0;
 }
 
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
 /*
 ==============
   TYPOGRAPHY
@@ -31,6 +45,19 @@ body {
   font-size: 1.125rem;
   line-height: 1.6;
   color: #212529;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  margin: 0 auto;
+}
+
+p {
+  color: #4c4c4c;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 /*
@@ -100,16 +127,38 @@ body {
   width: 75%;
 }
 
+.shadow-box {
+  background-color: #fff;
+  box-shadow: 0 2px 92px #00000012;
+}
+
+/* Footer */
+#footer {
+  border-radius: 6px;
+  margin: 3rem auto;
+  padding: 1rem;
+  color: #9c9c9c;
+  background: #1e1e1e;;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#footer > span {
+  font-size: 2rem;
+  color: #fff;
+}
+
+#footer p > span {
+  color: #fff;
+}
+
+
+
 /* LEFT CONTENT */
 
 .card-box {
   border-radius: 6px;
   display: inline-block;
-}
-
-.content-box {
-  background-color: #fff;
-  box-shadow: 0 2px 92px #00000012;
 }
 
 .card-name {
@@ -151,7 +200,7 @@ ul.infor {
   margin: 0 auto;
   position: relative;
   list-style: none;
-  margin: 8px 0 8px 35px;
+  margin: 15px 0 8px 35px;
 }
 
 .infor .line-points {
@@ -194,7 +243,6 @@ ul.infor {
   border: 2px solid orange;
   border-radius: 50%;
   position: absolute;
-  margin-top: 5px;
   left: -3px;
   font-size: 8px;
   font-weight: 400;
@@ -215,7 +263,11 @@ ul.infor {
   color: #000;
 }
 
-/* RIGHT CONTENT */
+/* 
+===============
+  RIGHT CONTENT 
+===============  
+ */
 #right-content nav {
   background: #fff;
   border-radius: 6px;
@@ -225,6 +277,23 @@ ul.infor {
   line-height: 70px;
   display: inline-block;
   box-shadow: 0 2px 92px #00000012;
+}
+
+.section-title {
+  padding: 0 0.3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title span {
+  opacity: 0.4;
+  left: 0;
+  bottom: 2.5px;
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  background-color: orange;
+  height: 7px;
 }
 
 /* NAV */
@@ -277,14 +346,67 @@ ul.infor {
   padding: 0;
 }
 
+.nav-right {
+  max-width: 100%;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.nav-right li::before {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0 1rem;
+}
+
+.nav-right a {
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-right .site-btn.icon {
+  color: #000;
+  margin: 18px 18px 0 5px;
+}
+
+.nav-right .site-btn.icon i {
+  padding: 13px 7px;
+}
+
+/* ABOUT ME */
+.about-me {
+  padding: 4.5rem 3.1rem;
+}
+
+.about-me p {
+  margin-top: 3rem;
+}
+
 /* SERVICE ROW */
-.services-row {
+.service {
+  background: #fafafa;
+  padding: 5rem 3rem;
+}
+
+.service .section-title {
+  margin-bottom: 4.5rem;
+}
+
+.service-row {
   display: flex;
-  gap: 5%;
+  gap: 2.6%;
 }
 
 .col-1-4 {
-  width: 20%;
+  width: 25%;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  min-height: 186px;
+  box-shadow: 0 0 48px #04060414;
+}
+
+.service-icon i:before {
+  font-size: 4.4rem;
 }
 
 /* SKILLS */
@@ -295,6 +417,7 @@ ul.infor {
 .design-skills,
 .code-skills {
   width: 50%;
+  padding: 5rem 3rem;
 }
 
 .design-skills *,
@@ -302,8 +425,26 @@ ul.infor {
   list-style: none;
 }
 
+.skills-percentage {
+  background: #dfdfdf;
+  border-radius: 50px;
+  width: 100%;
+  height: 5px;
+  margin: 10px 0 20px;
+  display: block;
+  position: relative;
+  overflow: visible;
+}
+
+.exp-level {
+  height: 5px;
+  background: orange;
+}
+
 /*
- * RESUME *
+===============
+  RESUME 
+===============
 */
 
 .work-history,
