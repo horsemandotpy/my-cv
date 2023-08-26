@@ -406,8 +406,26 @@ ul.infor {
   box-shadow: 0 0 48px #04060414;
 }
 
+.service-icon i {
+  
+  margin-bottom: 1.5rem;
+}
+
 .service-icon i:before {
   font-size: 4.4rem;
+}
+
+.col-1-4 span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.col-1-4 p {
+  margin: 0;
+  color: #989898;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 /* SKILLS */
@@ -421,10 +439,18 @@ ul.infor {
   padding: 5rem 3rem;
 }
 
-.design-skills *,
-.code-skills * {
+.design-skills li,
+.code-skills li {
   list-style: none;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
+
+.design-skills .section-title,
+.code-skills .section-title{
+  margin-bottom: 4.5rem;
+}
+
 
 .skills-percentage {
   background: #dfdfdf;
