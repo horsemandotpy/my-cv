@@ -612,8 +612,19 @@ ul.infor {
   display: flex;
 }
 
+.clients-img {
+  width: 23%;
+}
+
+.clients-job {
+  width: 68%;
+  line-height: 1.5rem;
+  padding: .8rem 1.2rem;
+}
+
 .clients-img img {
-  width: 70%;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
 }
 
