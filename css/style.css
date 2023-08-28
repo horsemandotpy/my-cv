@@ -90,6 +90,10 @@ p {
   border-radius: 50px;
 }
 
+.site-btn:hover {
+  background: #ffb100;
+}
+
 .gray-bg {
   background: #fafafa;
 }
@@ -309,6 +313,10 @@ ul.infor {
   justify-content: space-between;
 }
 
+#tab-active {
+  color: orange;
+}
+
 .nav-left,
 .nav-right {
   display: flex;
@@ -317,6 +325,43 @@ ul.infor {
 .nav-left *,
 .nav-right * {
   list-style: none;
+  cursor: pointer;
+}
+
+.nav-left li > *:hover {
+  color: orange;
+}
+
+.nav-left li:first-child:hover > * {
+  color: #000;
+  background: #ffb100;
+}
+
+.nav-left li:first-child:hover {
+  color: #000;
+  background: #ffb100;
+}
+
+.nav-right *:hover {
+  color: blue;
+  transition: all 0.3s;
+  transform: scale(1.25);
+}
+
+.nav-right .fa-instagram:hover {
+  color: pink;
+}
+
+.nav-right .fa-basketball:hover {
+  color: red;
+}
+
+.nav-right > li:last-child:hover {
+  transform: scale(1.1);
+}
+
+.nav-right > li:last-child:hover > * {
+  transform: none;
 }
 
 .nav-left a {
@@ -720,7 +765,7 @@ ul.infor {
   font-size: 14px;
 }
 
-.filter-bar > *:active{
+.filter-bar > *:active {
   color: orange;
 }
 
