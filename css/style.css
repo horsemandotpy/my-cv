@@ -619,7 +619,7 @@ ul.infor {
 .clients-job {
   width: 68%;
   line-height: 1.5rem;
-  padding: .8rem 1.2rem;
+  padding: 0.8rem 1.2rem;
 }
 
 .clients-img img {
@@ -695,7 +695,102 @@ ul.infor {
 }
 
 /*
- * CONTACT *
+===============
+ PORTFOLIO
+===============
+*/
+.portfolio.shadow-box {
+  padding: 1.5rem;
+}
+
+.portfolio .section-title {
+  margin: 3rem 0;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.filter-bar > * {
+  margin-right: 1.5rem;
+  list-style: none;
+  color: #787878;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filter-bar > *:active{
+  color: orange;
+}
+
+.projects {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.demo {
+  padding: 1.5rem;
+}
+
+figure {
+  position: relative;
+  margin: 0;
+}
+
+figure:hover .icon-hover i {
+  color: #fff;
+  transition: all 0.3s;
+  opacity: 0.9;
+  transform: translateY(-2.5rem);
+  background: orange;
+}
+
+figure .icon-hover i {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  font-size: 1.8rem;
+  transform: translateY(5rem);
+  opacity: 0;
+  background: orange;
+  padding: 2rem;
+  border-radius: 50%;
+}
+
+.demo a {
+  text-decoration: none;
+}
+
+.demo figcaption > * {
+  color: #989898;
+  font-size: 13px;
+  line-height: 18px;
+  display: block;
+  line-height: 1.8rem;
+}
+
+.demo figcaption {
+  padding: 1.4rem;
+}
+
+figcaption .project-title {
+  color: #000;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+.portfolio .card-btn a {
+  padding-right: 1.9rem;
+}
+
+/*
+============
+  CONTACT 
+============
 */
 .contact-sections {
   display: flex;
