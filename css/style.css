@@ -142,6 +142,17 @@ body {
   box-shadow: 0 2px 92px #00000012;
 }
 
+@media (max-width: 700px) {
+  .container > .row {
+    flex-direction: column;
+  }
+
+  #left-content,
+  #right-content {
+    width: 100%;
+  }
+}
+
 /* Footer */
 #footer {
   border-radius: 6px;
@@ -306,6 +317,12 @@ ul.infor {
   height: 7px;
 }
 
+@media (max-width: 900px) {
+  .btn__hire-me {
+    display: none;
+  }
+}
+
 /* NAV */
 
 #right-content nav {
@@ -421,6 +438,46 @@ ul.infor {
 
 .nav-right .site-btn.icon i {
   padding: 13px 7px;
+}
+
+@media (max-width: 700px) {
+  #right-content nav {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+
+  .nav-left li:first-of-type {
+    text-align: center;
+    padding-right: 1.4rem;
+  }
+
+  .nav-left {
+    max-width: 100%;
+    margin-left: calc(-1 * 1rem);
+    margin-right: calc(-1 * 1rem);
+  }
+  .nav-right {
+    display: none;
+  }
+
+  .service-row {
+    flex-direction: column;
+    column-gap: 1rem;
+  }
+
+  .service-row > .col-1-4 {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .skills-progression {
+    flex-direction: column;
+  }
+
+  .skills-progression > .design-skills,
+  .skills-progression > .code-skills {
+    width: 100%;
+  }
 }
 
 /* ABOUT ME */
@@ -560,14 +617,14 @@ ul.infor {
 .resume h3 {
   margin: 0;
   margin-left: 2.5rem;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 500;
-  line-height: 30px;
+  line-height: 3rem;
 }
 
 .resume h4 {
-  font-size: 16px;
-  line-height: 6px;
+  font-size: 1.6rem;
+  line-height: 0.6rem;
   font-weight: 500;
 }
 
@@ -587,6 +644,14 @@ ul.infor {
 
 .resume .line-points:first-of-type i::before {
   padding: 1.7rem;
+}
+
+@media (max-width: 800px) {
+  .resume h4 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+  }
 }
 
 /* Clients */
@@ -617,6 +682,15 @@ ul.infor {
   border-radius: 6px;
   background: #fff;
   padding: 2.6rem 1.6rem;
+}
+
+@media (max-width: 700px) {
+  .clients .row {
+    flex-direction: column;
+  }
+  .clients .row > * {
+    width: calc(100% - 2 * 1rem);
+  }
 }
 
 /* Testimonials */
@@ -832,6 +906,38 @@ figcaption .project-title {
   padding-right: 1.9rem;
 }
 
+@media (max-width: 700px) {
+  
+  .projects {
+    margin-top: 3rem;
+  }
+  
+  .filter-bar > * {
+    font-size: 1rem;
+  }
+  figure:hover .icon-hover i {
+    color: #fff;
+    transition: all 0.3s;
+    opacity: 0.9;
+    transform: translateY(-3.5rem);
+    background: orange;
+  }
+
+  figure .icon-hover i {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-size: 1rem;
+    transform: translateY(3rem);
+    opacity: 0;
+    background: orange;
+    padding: 1rem;
+    border-radius: 50%;
+  }
+}
+
 /* 
 ================ 
   BLOG 
@@ -910,6 +1016,13 @@ figcaption .project-title {
   padding-right: 1.9rem;
 }
 
+@media (max-width: 700px) {
+  .posts {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 /*
 ============
   CONTACT 
@@ -981,7 +1094,7 @@ figcaption .project-title {
 .contact-form form input:focus,
 .contact-form form textarea:focus {
   border-bottom: 1px solid #000;
-} 
+}
 
 .contact .card-btn {
   text-align: left;
@@ -1038,4 +1151,15 @@ figcaption .project-title {
 .contact-map > iframe {
   width: 100%;
   height: 35rem;
+}
+
+@media (max-width: 700px) {
+  .contact-sections {
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-infor {
+    width: 100%;
+  }
 }
