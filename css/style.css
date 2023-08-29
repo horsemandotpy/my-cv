@@ -978,6 +978,11 @@ figcaption .project-title {
   padding: 20px 0 0 10px;
 }
 
+.contact-form form input:focus,
+.contact-form form textarea:focus {
+  border-bottom: 1px solid #000;
+} 
+
 .contact .card-btn {
   text-align: left;
 }
